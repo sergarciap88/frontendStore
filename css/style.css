@@ -1,0 +1,173 @@
+:root {
+
+    --primario: #7105cf;
+    --primarioOscruo: #490499;
+    --secundario: #ffce00;
+    --secundarioOscuro: rgb(233, 287, 2);
+    --blanco: #fff;
+    --negro: #000;
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*Nos permite que 1 rem sean = a 10 pixeles (px)*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+
+
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    /*16 pixeles*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {
+
+    text-decoration: none;
+    /*Quita el interlineado de abajo a los enlaces*/
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+    /* = 40px*/
+}
+
+h2 {
+    font-size: 3, 2rem;
+}
+
+h3 {
+
+    font-size: 2.4rem;
+    /*= 24px*/
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo {
+    margin: 3rem 0;
+}
+
+.footer {
+    background-color: var(--primarioOscruo);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto {
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+}
+
+.navegacion {
+    background-color: var(--primarioOscruo);
+    padding: 1rem 0;
+    /*El uno toma valor arriba y abajo mientras es cero izquierda y derecha*/
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    /*Separacion forma nueva*/
+}
+
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+    margin-right: 3rem;
+
+
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--secundario);
+
+}
+
+/* Grid*  Codigo mas importante a la hora de crear una tienda virtual*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* situa un elemento al lado del otro a una fraccion de distancia */
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* situa un elemento al lado del otro a una fraccion de distancia */
+    }
+}
+/* Fin Grid*/
+
+/* Productos*/
+
+.producto {
+    background-color: var(--primarioOscruo);
+    padding: 1rem;
+}
+
+/* El bloque es Producto*/
+
+.producto__imagen {}
+
+.producto__informacion {}
+
+.producto__nombre {
+    font-size: 2.5rem;
+}
+
+.producto__precio {
+    font-size: 1.5rem;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
