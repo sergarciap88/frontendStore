@@ -24,12 +24,42 @@
     <nav class="navegacion">
         <a class="navegacion__enlace " href="index.html">Tienda</a>
         <!--Modificador = navegacion__enlace--activo (deja el color fijo en el elemento) -->
-        <a class="navegacion__enlace navegacion__enlace--activo"" href="producto.html">Producto</a>
+        <a class="navegacion__enlace navegacion__enlace--activo"" href=" producto.html">Producto</a>
     </nav>
 
 
     <main class="contenedor">
-        <h1>Producto</h1>
+        <h1>React JS</h1>
+
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/3.jpg" alt="imagen del producto">
+
+            <div class="camisa__contenido">
+                <p>
+                    Proin vel ante mollis, efficitur sapien a, mattis mi. Maecenas vitae lectus a ipsum volutpat
+                    fermentum vel sit amet
+                    dolor. Donec eu facilisis nulla, et interdum purus. Etiam quis odio pharetra, egestas urna et,
+                    consequat nulla. Etiam
+                    quis nulla ex. Aliquam placerat lacinia odio, quis maximus neque lobortis vehicula. Aliquam a
+                    gravida nunc, sit amet
+                </p>
+                <form class="formulario">
+                    <select class="formulario__campo">
+                        <option disabled selected>--Seleccionar Talla--</option>
+                        <!--se desabilita seleccionar talla como opcion,queda como titulo-->
+
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito">
+                </form>
+            </div>
+
+
+        </div>
 
     </main>
 
